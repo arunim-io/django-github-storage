@@ -28,7 +28,7 @@ post_install = 'postinstall'
 post_update  = 'postupdate'
 
 [tool.poe.tasks]
-postinstall = 'pre-commit install --hook-type commit-msg'
+postinstall = 'pre-commit install --hook-type commit-msg --hook-type pre-commit'
 postupdate  = 'pre-commit autoupdate'
 
 [tool.commitizen]
