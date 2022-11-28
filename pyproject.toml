@@ -1,8 +1,13 @@
 [tool.poetry]
 authors     = ["Mugdha Arunim Ahmed <mugdhaarunimahmed2017@gmail.com>"]
+classifiers = ['Development Status :: 5 - Production/Stable', 'Environment :: Web Environment', 'Framework :: Django', 'Framework :: Django :: 3.2', 'Framework :: Django :: 4.0', 'Framework :: Django :: 4.1', 'Intended Audience :: Developers', 'License :: OSI Approved :: BSD-3-Clause License', 'Operating System :: OS Independent', 'Programming Language :: Python', 'Programming Language :: Python :: 2', 'Programming Language :: Python :: 3', 'Programming Language :: Python :: 3.6', 'Programming Language :: Python :: 3.7', 'Programming Language :: Python :: 3.8', 'Programming Language :: Python :: 3.9', 'Programming Language :: Python :: 3.10', 'Programming Language :: Python :: 3.11']
 description = "A Django file storage backend that leverages GitHub."
+homepage    = "https://github.com/arunim-io/django-github-storage"
+license     = "BSD-3-Clause"
 name        = "django-github-storage"
 packages    = [{ include = 'github_storage' }]
+readme      = "README.md"
+repository  = "https://github.com/arunim-io/django-github-storage"
 version     = "0.1.0"
 
   [tool.poetry.dependencies]
@@ -15,3 +20,36 @@ version     = "0.1.0"
   django = { version = "^4.1.3", python = ">=3.8,<=3.11" }
   isort  = { version = "^5.10.1", python = ">=3.6.1,<=3.11" }
   pylint = { version = "^2.15.6", python = ">=3.7.2,<=3.11" }
+
+# pyright
+[tool.pyright]
+exclude = [".venv"]
+
+# isort
+[tool.isort]
+known_first_party = ["django"]
+profile           = "django"
+skip_gitignore    = true
+skip_glob         = ["**/migrations/*"]
+
+# pylint
+[tool.pylint.main]
+disable = ["wrong-import-order", "C0114", "C0115", "C0116", "W0223"]
+ignore  = ["migrations", "__init__.py"]
+
+[tool.pylint.message_control]
+disable = """
+    line-too-long,
+    abstract-method,
+    no-member,
+"""
+enable = "useless-suppression"
+
+[tool.pylint.reports]
+reports = "no"
+
+[tool.pylint.format]
+max-line-length = "79"
+
+[tool.pylint.basic]
+good-names = "_,i,e,setUp,tearDown,maxDiff"
