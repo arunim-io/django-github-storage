@@ -16,10 +16,25 @@ version     = "0.1.0"
   requests = { version = ">=2", python = ">=3.8,<=3.11" }
 
   [tool.poetry.group.dev.dependencies]
-  black  = { version = "^22.10.0", python = ">=3.7,<=3.11" }
-  django = { version = "^4.1.3", python = ">=3.8,<=3.11" }
-  isort  = { version = "^5.10.1", python = ">=3.6.1,<=3.11" }
-  pylint = { version = "^2.15.6", python = ">=3.7.2,<=3.11" }
+  black      = { version = "^22.10.0", python = ">=3.7,<=3.11" }
+  commitizen = { version = "^2.37.0", python = ">=3.6.2,<=3.11" }
+  django     = { version = "^4.1.3", python = ">=3.8,<=3.11" }
+  isort      = { version = "^5.10.1", python = ">=3.6.1,<=3.11" }
+  pre-commit = { version = "^2.20.0", python = ">=3.7,<=3.11" }
+  pylint     = { version = "^2.15.6", python = ">=3.7.2,<=3.11" }
+
+[tool.poe.poetry_hooks]
+post_install = 'postinstall'
+post_update  = 'postupdate'
+
+[tool.poe.tasks]
+postinstall = 'pre-commit install --hook-type commit-msg'
+postupdate  = 'pre-commit autoupdate'
+
+[tool.commitizen]
+name       = "cz_conventional_commits"
+tag_format = "$version"
+version    = "0.0.1"
 
 # pyright
 [tool.pyright]
