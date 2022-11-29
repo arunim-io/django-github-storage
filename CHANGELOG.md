@@ -1,3 +1,9 @@
+## 0.1.2 (2022-11-29)
+
+### Fix
+
+- github action for publishing
+
 ## 0.1.1 (2022-11-29)
 
 ### Fix
