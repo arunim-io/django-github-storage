@@ -34,7 +34,7 @@ postupdate  = 'pre-commit autoupdate'
 [tool.commitizen]
 name       = "cz_conventional_commits"
 tag_format = "$version"
-version    = "0.1.0"
+version    = "0.1.1"
 
 # pyright
 [tool.pyright]
