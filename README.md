@@ -1,7 +1,11 @@
 # django-github-storage
 
-![GitHub](https://img.shields.io/github/license/arunim-io/django-github-storage?style=flat-square)
+![PyPI - License](https://img.shields.io/pypi/l/django-github-storages?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/arunim-io/django-github-storage?style=flat-square)
+![PyPI](https://img.shields.io/pypi/v/django-github-storages?style=flat-square)
+![PyPI - Status](https://img.shields.io/pypi/status/django-github-storages?style=flat-square)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/django-github-storages?style=flat-square)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-github-storages?style=flat-square)
 
 > A Django file storage backend that leverages GitHub.
 
