@@ -25,13 +25,13 @@ It is highly recommended to use the latest versions of Python and Django if poss
    - Using poetry:
 
    ```console
-   poetry add django-github-storage
+   poetry add django-github-storages
    ```
 
    - Using pip:
 
    ```console
-   pip install django-github-storage
+   pip install django-github-storages
    ```
 
 2. Include the package in the `INSTALLED_APPS` dict in your `<project-dir>/settings.py`.
@@ -39,7 +39,7 @@ It is highly recommended to use the latest versions of Python and Django if poss
 ```python
 INSTALLED_APPS = [
     # other apps...
-    'github_storages',
+    'github_storage',
 ]
 
 ```
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 3. Set the following settings:
 
 ```python
-DEFAULT_FILE_STORAGE = "github_storages.backend.BackendStorages"
+DEFAULT_FILE_STORAGE = "github_storage.backend.BackendStorage"
 
 GITHUB_USERNAME = ""
 GITHUB_ACCESS_TOKEN = ""
