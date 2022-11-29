@@ -4,7 +4,7 @@ classifiers = ['Development Status :: 5 - Production/Stable', 'Environment :: We
 description = "A Django file storage backend that leverages GitHub."
 homepage    = "https://github.com/arunim-io/django-github-storage"
 license     = "BSD-3-Clause"
-name        = "django-github-storage"
+name        = "django-github-storages"
 packages    = [{ include = 'github_storage' }]
 readme      = "README.md"
 repository  = "https://github.com/arunim-io/django-github-storage"
